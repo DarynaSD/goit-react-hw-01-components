@@ -1,33 +1,46 @@
+import PropTypes from 'prop-types';
+
+import { ProfileWrap, ProfileImg, InfoWrap, UserName, StatsWrap, StatsInfo } from './Profile.styles';
+
 export default function Profile(props) {
     const { username, tag, location, avatar, stats } = props;
 
     return (
-        <div class="profile">
-  <div class="description">
-    <img
+    <ProfileWrap>
+  <InfoWrap>
+    <ProfileImg
       src={avatar}
       alt="User avatar"
       class="avatar"
     />
-    <p class="name">{username}</p>
+    <UserName>{username}</UserName>
     <p class="tag">@{tag}</p>
     <p class="location">{location}</p>
-  </div>
+  </InfoWrap>
 
-  <ul class="stats">
-    <li>
+  <StatsWrap>
+    <StatsInfo>
       <span class="label">Followers</span>
       <span class="quantity">{stats.followers}</span>
-    </li>
-    <li>
+    </StatsInfo>
+    <StatsInfo>
       <span class="label">Views</span>
       <span class="quantity">{stats.views}</span>
-    </li>
-    <li>
+    </StatsInfo>
+    <StatsInfo>
       <span class="label">Likes</span>
       <span class="quantity">{stats.likes}</span>
-    </li>
-  </ul>
-</div>
+    </StatsInfo>
+  </StatsWrap>
+</ProfileWrap>
     )
+}
+
+
+Profile.propTypes = {
+  username: PropTypes.string, 
+  tag: PropTypes.string, 
+  location: PropTypes.string, 
+  avatar: PropTypes.string, 
+  stats: PropTypes.objectOf(PropTypes.number),
 }

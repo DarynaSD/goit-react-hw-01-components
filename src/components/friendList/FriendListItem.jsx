@@ -7,8 +7,8 @@ export default function FriendsListItem(props) {
     return (
 <FriendsLi>
   <FriensOnline isOnline={isOnline} />
-  <img class="avatar" src={avatar} alt="User avatar" width="48" />
-  <p class="name">{ name }</p>
+  <img src={avatar} alt="User avatar" width="48" />
+  <p>{ name }</p>
 </FriendsLi>
     )
 }

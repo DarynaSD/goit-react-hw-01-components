@@ -11,25 +11,24 @@ export default function Profile(props) {
     <ProfileImg
       src={avatar}
       alt="User avatar"
-      class="avatar"
     />
     <UserName>{username}</UserName>
-    <p class="tag">@{tag}</p>
-    <p class="location">{location}</p>
+    <p>@{tag}</p>
+    <p>{location}</p>
   </InfoWrap>
 
   <StatsWrap>
     <StatsInfo>
-      <span class="label">Followers</span>
-      <span class="quantity">{stats.followers}</span>
+      <span>Followers</span>
+      <span>{stats.followers}</span>
     </StatsInfo>
     <StatsInfo>
-      <span class="label">Views</span>
-      <span class="quantity">{stats.views}</span>
+      <span>Views</span>
+      <span>{stats.views}</span>
     </StatsInfo>
     <StatsInfo>
-      <span class="label">Likes</span>
-      <span class="quantity">{stats.likes}</span>
+      <span>Likes</span>
+      <span>{stats.likes}</span>
     </StatsInfo>
   </StatsWrap>
 </ProfileWrap>

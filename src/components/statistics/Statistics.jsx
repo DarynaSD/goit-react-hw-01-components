@@ -7,7 +7,8 @@ export default function Statistics(props) {
 
     return (
 <StatSection>
-  <StatTitle>{title}</StatTitle>
+    {title && <StatTitle>{title}</StatTitle>}
+        
 
     <StatList>
     {

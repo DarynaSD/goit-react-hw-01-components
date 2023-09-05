@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-import { ProfileWrap, ProfileImg, InfoWrap, UserName, StatsWrap, StatsInfo } from './Profile.styles';
+import { ProfileWrap, ProfileImg, InfoWrap, UserName, StatsWrap, StatsInfo } from './Profile.styled';
 
 export default function Profile(props) {
     const { username, tag, location, avatar, stats } = props;
